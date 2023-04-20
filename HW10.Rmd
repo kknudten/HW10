@@ -20,11 +20,20 @@ person = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/m
 vehicle = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/vehicle.csv")
 ```
 
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+
 ### Part 1: Accident data
 #### Are there some days of the week where more accidents happen than on others (use variable DAY_WEEK)?
 ```{r}
-
+acc %>% group_by(DAY_WEEK) %>% count() %>% arrange(desc(n))
 ```
+
+It seems that the most crashes happen on Fridays and Saturdays, with the least crashes happening on Tuesdays. 
+
 #### What time of day do accidents happen (use variable HOUR)?
 ```{r}
 
