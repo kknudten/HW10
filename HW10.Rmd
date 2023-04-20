@@ -12,4 +12,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ## HW 10
 ### Kylie Knudten and Alison Wyatt
 
+```{r}
+acc = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/accident.csv")
+person = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/person.csv")
+vehicle = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/vehicle.csv")
+```
+
 
