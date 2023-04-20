@@ -18,6 +18,7 @@ Github: https://github.com/kknudten/HW10.git
 acc = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/accident.csv")
 person = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/person.csv")
 vehicle = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/vehicle.csv")
+acc
 ```
 
 ```{r}
@@ -43,8 +44,10 @@ Accidents happen all day, but the most occur at night. The hour with the highest
 
 #### What is the number of accidents with at least one drunk driver (use variable DRUNK_DR)?
 ```{r}
-
+sum(acc$DRUNK_DR >= 1)
 ```
+
+There are 8720 accidents recorded that involved at least one drunk driver.
 
 ### Part 2: Connecting data
 #### Connect to the person table. Identify drivers (PER_TYP == 1, see fars manual) and subset on them.
