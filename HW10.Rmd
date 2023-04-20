@@ -51,11 +51,7 @@ There are 8720 accidents recorded that involved at least one drunk driver.
 ### Part 2: Connecting data
 #### Connect to the person table. Identify drivers (PER_TYP == 1, see fars manual) and subset on them.
 ```{r}
-<<<<<<< HEAD
-person
-=======
 person1 = person %>% filter(PER_TYP == 1)
->>>>>>> 3d3fbc79b78660df6cf2f896cb1bd89782512b55
 ```
 #### Join accident and driver table (work out which variable(s) to use)
 ```{r}
