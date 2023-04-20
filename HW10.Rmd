@@ -36,8 +36,11 @@ It seems that the most crashes happen on Fridays and Saturdays, with the least c
 
 #### What time of day do accidents happen (use variable HOUR)?
 ```{r}
-
+acc %>% group_by(HOUR) %>% count() %>% arrange(desc(n))
 ```
+
+Accidents happen all day, but the most occur at night. The hour with the highest amount of accidents is hour 18, or 6pm at night, followed by hour 20, or 8pm. The hour with the least amount of accidents is hour 4, or 4am. 
+
 #### What is the number of accidents with at least one drunk driver (use variable DRUNK_DR)?
 ```{r}
 
