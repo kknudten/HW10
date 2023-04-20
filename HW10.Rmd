@@ -55,7 +55,7 @@ person1 = person %>% filter(PER_TYP == 1)
 ```
 #### Join accident and driver table (work out which variable(s) to use)
 ```{r}
-acc.person = left_join(person, acc, by = "ST_CASE")
+acc.driver = left_join(person1, acc, by = c("ST_CASE","HOUR"))
 ```
 #### Tally the number of accidents by day of the week (DAY_WEEK), hour of the day(HOUR) and gender(SEX). Visualize the results!
 ```{r}
