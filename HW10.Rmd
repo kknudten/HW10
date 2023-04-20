@@ -18,7 +18,6 @@ Github: https://github.com/kknudten/HW10.git
 acc = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/accident.csv")
 person = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/person.csv")
 vehicle = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/vehicle.csv")
-acc
 ```
 
 ```{r}
