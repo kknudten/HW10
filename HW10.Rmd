@@ -11,6 +11,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## HW 10
 ### Kylie Knudten and Alison Wyatt
+Github: https://github.com/kknudten/HW10.git
+
 
 ```{r}
 acc = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/accident.csv")
@@ -18,4 +20,31 @@ person = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/m
 vehicle = read.csv("https://raw.githubusercontent.com/yumouqiu/DS202-Spring2023/main/Practice/data/fars2016/vehicle.csv")
 ```
 
+### Part 1: Accident data
+#### Are there some days of the week where more accidents happen than on others (use variable DAY_WEEK)?
+```{r}
+
+```
+#### What time of day do accidents happen (use variable HOUR)?
+```{r}
+
+```
+#### What is the number of accidents with at least one drunk driver (use variable DRUNK_DR)?
+```{r}
+
+```
+
+### Part 2: Connecting data
+#### Connect to the person table. Identify drivers (PER_TYP == 1, see fars manual) and subset on them.
+```{r}
+
+```
+#### Join accident and driver table (work out which variable(s) to use)
+```{r}
+
+```
+#### Tally the number of accidents by day of the week (DAY_WEEK), hour of the day(HOUR) and gender(SEX). Visualize the results!
+```{r}
+
+```
 
