@@ -59,8 +59,15 @@ acc.driver = left_join(person1, acc, by = c("ST_CASE","HOUR"))
 ```
 #### Tally the number of accidents by day of the week (DAY_WEEK), hour of the day(HOUR) and gender(SEX). Visualize the results!
 ```{r}
-acc.driver1 <- acc.driver %>% filter(HOUR != 99) %>% group_by(DAY_WEEK, HOUR, SEX) %>% summarise(numAcc = n())
+## Does this question mean tally each situation separately? **
+acc.driver1 <- acc.driver %>% filter(HOUR != 99) 
 
-acc.driver1 %>% ggplot(aes(x=factor(DAY_WEEK),y=HOUR)) + geom_point()
+acc.driver1 <- acc.driver1 %>% group_by(DAY_WEEK, HOUR, SEX) %>% summarise(numAcc = n())
+
+##visualize in table:
+acc.driver1
+
+##visualize in graph:
+acc.driver1 %>% ggplot(aes(x=DAY_WEEK,y=HOUR,colour = factor(SEX))) + geom_histogram()
 ```
 
