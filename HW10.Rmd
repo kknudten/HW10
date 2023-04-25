@@ -67,9 +67,13 @@ acc.driver1 <- acc.driver1 %>% group_by(DAY_WEEK, HOUR, SEX) %>% summarise(numAc
 ##visualize in table:
 acc.driver1
 
-##visualize tally of accidents by day of the week:
+##visualize tally of accidents by day of the week showing differences between sex classifications:
 acc.driver1 %>% ggplot(aes(x=factor(DAY_WEEK),fill=factor(SEX))) + geom_bar()
 
-##visualize tally of accidents 
+##visualize tally of accidents by hour showing differences between sex classifications:
+acc.driver1 %>% ggplot(aes(x=factor(HOUR),fill=factor(SEX))) + geom_bar()
+
+##tally of accidents by sex classification:
+acc.driver1 %>% ggplot(aes(x=factor(SEX))) + geom_bar()
 ```
 
