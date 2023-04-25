@@ -67,7 +67,9 @@ acc.driver1 <- acc.driver1 %>% group_by(DAY_WEEK, HOUR, SEX) %>% summarise(numAc
 ##visualize in table:
 acc.driver1
 
-##visualize in graph:
-acc.driver1 %>% ggplot(aes(x=DAY_WEEK,y=HOUR,colour = factor(SEX))) + geom_histogram()
+##visualize tally of accidents by day of the week:
+acc.driver1 %>% ggplot(aes(x=factor(DAY_WEEK),fill=factor(SEX))) + geom_bar()
+
+##visualize tally of accidents 
 ```
 
